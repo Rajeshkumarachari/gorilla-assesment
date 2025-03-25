@@ -20,7 +20,8 @@ const App = () => {
         const userResult = await axios.get(
           `https://nextjs-boilerplate-five-plum-29.vercel.app/api/users/${task.id}`
         );
-        if (userResult.data && userResult.data.name) {
+        // console.log(userResult.data);
+        if (userResult.data && userResult.data.name && userResult.data.email) {
           users.push(userResult.data);
         }
         // console.log(typeof userResult.data);
